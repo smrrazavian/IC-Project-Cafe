@@ -5,8 +5,8 @@ import random
 class Cafe:
     def __init__(self, name) -> None:
         """This is the main function of Cafe's class and It contains menu and customer's name.
-            Args:
-            Returns:
+        Args:
+        Returns:
         """
         self.name = name
         self.menu = {
@@ -17,19 +17,17 @@ class Cafe:
             "Green Tea": 3.25,
             "Orange Juice": 3.5,
             "Croissant": 4.45,
-            "Muffin": 3.6
+            "Muffin": 3.6,
         }
         self.total_orders = []
         self.total_price = 0
 
     def request_menu(self) -> dict:
-        """
-        """
+        """ """
         print(self.menu)
 
     def place_order(self, order) -> None:
-        """
-        """
+        """ """
         if order in self.menu:
             self.total_orders.append(order)
             self.total_price += self.menu[order]
@@ -47,7 +45,7 @@ name = input("Hi!\nWelcome to our Cafe!\nWould you please enter your name?\n")
 customer = Cafe(name)
 menu_req = input("Do you want to see the menu?").lower()
 if menu_req == "yes":
-    customer.request_menu() # Todo : handle menu req.
+    customer.request_menu()  # Todo : handle menu req.
 while True:
     ordered = input("What do you want?: \n")
     order_status = True
@@ -94,6 +92,6 @@ while True:
                         discount = 1
                     elif counter <= 4 and counter > 1:
                         discount = 0.5
-                    elif counter <= 6 and counter >4:
+                    elif counter <= 6 and counter > 4:
                         discount = 0.1
                 customer.request_bill(discount)
