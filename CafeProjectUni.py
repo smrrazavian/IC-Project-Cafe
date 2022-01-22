@@ -72,6 +72,7 @@ while True:
                 y = int(game_loc[1])
                 guess_status = ""
                 game_done = False
+                discount = 0
                 if x > x_loc:
                     guess_status += "Left "
                 elif x < x_loc:
@@ -95,4 +96,4 @@ while True:
                         discount = 0.5
                     elif counter <= 6 and counter >4:
                         discount = 0.1
-                    customer.request_bill(discount)
+                customer.request_bill(discount)
